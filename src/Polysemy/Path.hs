@@ -1,11 +1,8 @@
 {-# LANGUAGE BlockArguments #-}
 {-# LANGUAGE DataKinds      #-}
 {-# LANGUAGE GADTs          #-}
-{-# LANGUAGE LambdaCase     #-}
 {-# LANGUAGE PolyKinds      #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeApplications #-}
-{-# LANGUAGE TypeOperators  #-}
 {-# OPTIONS_GHC -fplugin=Polysemy.Plugin #-}
 module Polysemy.Path where
 
