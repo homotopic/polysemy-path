@@ -1,0 +1,24 @@
+name:                polysemy-path
+version:             0.0.1.0
+git:                 https://gitlab.com/homotopic-tech/polysemy-path
+license:             MIT
+author:              "Daniel Firth"
+maintainer:          "dan.firth@homotopic.tech"
+copyright:           "2020 Daniel Firth"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            Polysemy versions of Path functions.
+category:            Polysemy
+
+dependencies:
+- base >= 4.7 && < 5
+- path
+- polysemy
+- polysemy-plugin
+- polysemy-zoo
+
+library:
+  source-dirs: src
