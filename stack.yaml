@@ -3,6 +3,7 @@ packages:
 - .
 extra-deps:
 - compact-0.2.0.0
+- path-0.8.0
 - polysemy-1.4.0.0
 - polysemy-extra-0.1.7.0
 - polysemy-plugin-0.2.5.1

@@ -1,5 +1,5 @@
 name:                polysemy-path
-version:             0.1.0.0
+version:             0.2.0.0
 git:                 https://gitlab.com/homotopic-tech/polysemy-path
 license:             MIT
 author:              "Daniel Firth"
@@ -15,7 +15,7 @@ category:            Polysemy
 
 dependencies:
 - base >= 4.7 && < 5
-- path
+- path >= 0.8.0 && < 0.9
 - polysemy
 - polysemy-extra >= 0.1.7.0 && < 0.2.0.0
 - polysemy-plugin

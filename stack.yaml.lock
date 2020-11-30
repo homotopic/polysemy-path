@@ -12,6 +12,13 @@ packages:
   original:
     hackage: compact-0.2.0.0
 - completed:
+    hackage: path-0.8.0@sha256:2ce69c2e537741aeead2f5d3ad2adafd6a7959015a50088bb3883ef84a7d792f,3077
+    pantry-tree:
+      size: 924
+      sha256: f63ef618842bd541acaa9cee968381b694ce926f072d385a10aad1d3f732d4ac
+  original:
+    hackage: path-0.8.0
+- completed:
     hackage: polysemy-1.4.0.0@sha256:0245a046eaf936557d4208b5a355df1a20799c9e274f91fa889ab2644ecbabae,6541
     pantry-tree:
       size: 4379
