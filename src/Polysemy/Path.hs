@@ -1,40 +1,74 @@
-{-# LANGUAGE BlockArguments #-}
-{-# LANGUAGE DataKinds      #-}
-{-# LANGUAGE GADTs          #-}
-{-# LANGUAGE PolyKinds      #-}
+{-|
+Module      : Polysemy.Path
+License     : MIT
+Maintainer  : dan.firth@homotopic.tech
+Stability   : experimental
+
+Polysemy versions of functions in the path library.
+-}
+{-# LANGUAGE DataKinds           #-}
+{-# LANGUAGE GADTs               #-}
+{-# LANGUAGE PolyKinds           #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# OPTIONS_GHC -fplugin=Polysemy.Plugin #-}
-module Polysemy.Path where
 
-import Control.Monad
-import Path
+module Polysemy.Path (
+  Path
+, Rel
+, Abs
+, File
+, Dir
+, PathException
+, parseRelFile
+, parseAbsFile
+, parseRelDir
+, parseAbsDir
+, stripProperPrefix
+) where
+
+import qualified Path
+import Path (Path, Rel, Abs, File, Dir, PathException)
 import Polysemy
-import Polysemy.ConstraintAbsorber.MonadCatch
 import Polysemy.Error
+import Polysemy.Extra
 
-
-parseRelFile' :: Members '[Error SomeException] r
-              => FilePath
-              -> Sem r (Path Rel File)
-parseRelFile' x = absorbMonadThrow (try . parseRelFile $ x) >>= either throw return
-
-parseAbsFile' :: Members '[Error SomeException] r
-              => FilePath
-              -> Sem r (Path Abs File)
-parseAbsFile' x = absorbMonadThrow (try . parseAbsFile $ x) >>= either throw return
-
-parseRelDir' :: Members '[Error SomeException] r
+-- | Polysemy version of `Path.parseRelFile`.
+--
+-- @since 0.1.0.0
+parseRelFile :: Members '[Error PathException] r
              => FilePath
-             -> Sem r (Path Rel Dir)
-parseRelDir' x = absorbMonadThrow (try . parseRelDir $ x) >>= either throw return
+             -> Sem r (Path Rel File)
+parseRelFile x = irrefutableAbsorbThrow (Path.parseRelFile x)
 
-parseAbsDir' :: Members '[Error SomeException] r
+-- | Polysemy version of `Path.parseAbsFile`.
+--
+-- @since 0.1.0.0
+parseAbsFile :: Members '[Error PathException] r
              => FilePath
-             -> Sem r (Path Abs Dir)
-parseAbsDir' x = absorbMonadThrow (try . parseAbsDir $ x) >>= either throw return
+             -> Sem r (Path Abs File)
+parseAbsFile x = irrefutableAbsorbThrow (Path.parseAbsFile x)
 
-stripProperPrefix' :: Members '[Error SomeException] r
-                   => Path b Dir
-                   -> Path b t
-                   -> Sem r (Path Rel t)
-stripProperPrefix' x y = absorbMonadThrow (try $ stripProperPrefix x y) >>= either throw return
+-- | Polysemy version of `Path.parseRelDir`.
+--
+-- @since 0.1.0.0
+parseRelDir :: Members '[Error PathException] r
+            => FilePath
+            -> Sem r (Path Rel Dir)
+parseRelDir x = irrefutableAbsorbThrow (Path.parseRelDir x)
+
+-- | Polysemy version of `Path.parseAbsDir`.
+--
+-- @since 0.1.0.0
+parseAbsDir :: Members '[Error PathException] r
+            => FilePath
+            -> Sem r (Path Abs Dir)
+parseAbsDir x = irrefutableAbsorbThrow (Path.parseAbsDir x)
+
+-- | Polysemy version of `Path.stripProperPrefix`.
+--
+-- @since 0.1.0.0
+stripProperPrefix :: Members '[Error PathException] r
+                  => Path b Dir
+                  -> Path b t
+                  -> Sem r (Path Rel t)
+stripProperPrefix x y = irrefutableAbsorbThrow (Path.stripProperPrefix x y)

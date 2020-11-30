@@ -12,6 +12,20 @@ packages:
   original:
     hackage: compact-0.2.0.0
 - completed:
+    hackage: polysemy-1.4.0.0@sha256:0245a046eaf936557d4208b5a355df1a20799c9e274f91fa889ab2644ecbabae,6541
+    pantry-tree:
+      size: 4379
+      sha256: babfd86f145bc6017f7b8c20e46266ab3a3bb5d5d415d8cf651036b11e57465a
+  original:
+    hackage: polysemy-1.4.0.0
+- completed:
+    hackage: polysemy-extra-0.1.7.0@sha256:d20385c4a414509653ce629e8c844b58d3b9e56c1cfbb4d41a3dd43a1849e05e,991
+    pantry-tree:
+      size: 274
+      sha256: eae6c2579980952aae62d4005a51e3251851cdf2046f0803a99b6a6039489d92
+  original:
+    hackage: polysemy-extra-0.1.7.0
+- completed:
     hackage: polysemy-plugin-0.2.5.1@sha256:61c6c0aad2852377aa5d5a8f9639a437905e3a6f0e2a99a41e96fb231dc86836,2952
     pantry-tree:
       size: 1232
@@ -27,7 +41,7 @@ packages:
     hackage: polysemy-zoo-0.7.0.1
 snapshots:
 - completed:
-    size: 543560
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2020/10/29.yaml
-    sha256: c8101bf4e679881fd9a6c8dcbdfc9586e119bdb2aad401f5c7e9bc0f8dac5622
-  original: nightly-2020-10-29
+    size: 554409
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2020/11/28.yaml
+    sha256: c41a5ef1c4fc0d5d55cf84e3ffa4481c3594226d1a404ffe090478d15069d35b
+  original: nightly-2020-11-28
