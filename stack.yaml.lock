@@ -3,49 +3,10 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages:
-- completed:
-    hackage: compact-0.2.0.0@sha256:9c5785bdc178ea6cf8f514ad35a78c64220e3cdb22216534e4cf496765551c7e,2345
-    pantry-tree:
-      size: 546
-      sha256: 6f7da573fbcddc109e1521edc07f1b34d7506473a3930074453e829daf901d71
-  original:
-    hackage: compact-0.2.0.0
-- completed:
-    hackage: polysemy-1.6.0.0@sha256:29a73b1bf3d0049b12041016b7ee25e76bd8f6e99f9c37c2dde2b46368246697,6184
-    pantry-tree:
-      size: 4577
-      sha256: c4ca508b4a6786fc27e0f484344ce8dba119ea2f7fe47fb7379a51313a94cd10
-  original:
-    hackage: polysemy-1.6.0.0
-- completed:
-    hackage: polysemy-extra-0.1.7.0@sha256:d20385c4a414509653ce629e8c844b58d3b9e56c1cfbb4d41a3dd43a1849e05e,991
-    pantry-tree:
-      size: 274
-      sha256: eae6c2579980952aae62d4005a51e3251851cdf2046f0803a99b6a6039489d92
-  original:
-    hackage: polysemy-extra-0.1.7.0
-- completed:
-    hackage: polysemy-plugin-0.4.0.0@sha256:456d3c22a6363a7be8b0856a40109c44bc9ad58e702fbc74679f2f0e89c3d309,3148
-    pantry-tree:
-      size: 1221
-      sha256: 846858f8362a58cece2dda10001d7eba11722947e04822fc5c3cdf52207b14e5
-  original:
-    hackage: polysemy-plugin-0.4.0.0
-- completed:
-    name: polysemy-zoo
-    version: 0.7.0.1
-    git: https://github.com/polysemy-research/polysemy-zoo
-    pantry-tree:
-      size: 3236
-      sha256: fe71b89acc5a56c00a0518148fe880a0987b77c943caa4274feaa04a797df9dc
-    commit: 1eed0f83f595cb7f666fc238da041080ea284938
-  original:
-    git: https://github.com/polysemy-research/polysemy-zoo
-    commit: 1eed0f83f595cb7f666fc238da041080ea284938
+packages: []
 snapshots:
 - completed:
-    size: 545913
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2021/7/9.yaml
-    sha256: ce06cd8d59421f17deeb8480ae33d76c67121599fcb6ef90ee48295b82c52668
-  original: nightly-2021-07-09
+    size: 567260
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2021/7/23.yaml
+    sha256: 94c5e73c2221ce53348504de8916c960a78a97bdc6ff0921200a42773694bd7c
+  original: nightly-2021-07-23
